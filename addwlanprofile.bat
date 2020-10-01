@@ -3,6 +3,8 @@
 set prof="eduroam"
 set xmlfile=".\Wi-Fi-eduroam.xml"
 
+cd /d %~dp0
+
 netsh wlan show profiles | find %prof% > nul
 
 rem if exist wlan profile eduroam delete 
